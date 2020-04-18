@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>邓文晋简历</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/swipebox.css">
+    <link type="text/css"  href="css/app.css" rel="stylesheet ">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+<!--top-nav-->
+<div class="top-nav wow">
+    <div class="container">
+        <div class="navbar-header logo">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                导航
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="menu">
+                <ul class="nav navbar">
+                    <li><a th:href="@{/index}" class="active">主页</a></li>
+                    <li><a th:href="@{/about}">关于我</a></li>
+                    <li><a th:href="@{/experience}">个人经历</a></li>
+                    <li><a th:href="@{/education}">教育背景</a></li>
+                    <li><a th:href="@{/skills}">专业技能</a></li>
+                    <li><a th:href="@{/portfolio}">部分作品</a></li>
+                    <li><a th:href="@{/contact}">联系我</a></li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="react" style="margin-top: 200px">
+    <div class="out_front">
+        <img src="images2/1.jpg" class="out_pic">
+    </div>
+    <div class="out_back">
+        <img src="images2/2.jpg" class="out_pic">
+    </div>
+    <div class="out_left">
+        <img src="images2/3.jpg" class="out_pic">
+    </div>
+    <div class="out_right">
+        <img src="images2/4.jpg" class="out_pic">
+    </div>
+    <div class="out_top">
+        <img src="images2/5.jpg" class="out_pic">
+    </div>
+    <div class="out_bottom">
+        <img src="images2/6.jpg" class="out_pic">
+    </div>
+    <span class="in_front">
+        <img src="images2/7.jpg" class="in_pic">
+    </span>
+    <span class="in_back">
+        <img src="images2/8.jpg" class="in_pic">
+    </span>
+    <span class="in_left">
+        <img src="images2/9.jpg" class="in_pic">
+    </span>
+    <span class="in_right">
+        <img src="images2/10.jpg" class="in_pic">
+    </span>
+    <span class="in_top">
+        <img src="images2/11.jpg" class="in_pic">
+    </span>
+    <span class="in_bottom">
+        <img src="images2/12.jpg" class="in_pic">
+    </span>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>邓文晋简历</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+	<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+<!--top-nav-->
+<div class="top-nav wow">
+	<div class="container">
+		<div class="navbar-header logo">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				导航
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="menu">
+				<ul class="nav navbar">
+					<li><a th:href="@{/index}" class="active">主页</a></li>
+					<li><a th:href="@{/about}">关于我</a></li>
+					<li><a th:href="@{/experience}">个人经历</a></li>
+					<li><a th:href="@{/education}">教育背景</a></li>
+					<li><a th:href="@{/skills}">专业技能</a></li>
+					<li><a th:href="@{/portfolio}">部分作品</a></li>
+					<li><a th:href="@{/contact}">联系我</a></li>
+				</ul>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--//top-nav-->
+
+	<!--banner-->
+	<div id="home" class="banner">
+		<div class="banner-info">
+			<div class="container">
+				<div class="col-md-4 header-left">
+					<a th:href="@{/picture}"><img src="images/photo.png" alt="邓文晋"/></a>
+				</div>
+				<div class="col-md-8 header-right">
+					<h2>Hello</h2>
+					<h1>My name is Deng Wenjin(邓文晋)</h1>
+					<h3 style="color: antiquewhite;margin-top: 10px">java工程师</h3>
+					<ul class="address">
+						<li>
+							<ul class="address-text">
+								<li><b>出生日期</b></li>
+								<li>14-03-1997</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>联系电话 </b></li>
+								<li><a href="tel:15730518892" target="_blank">15730518892</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>居住地址 </b></li>
+								<li><a href="https://map.baidu.com/search/%E9%87%8D%E5%BA%86%E5%B8%82%E4%B9%9D%E9%BE%99%E5%9D%A1%E5%8C%BA%E7%9F%B3%E6%A1%A5%E9%93%BA/@11852632.374964911,3422871.115,15.2z?querytype=s&da_src=shareurl&wd=%E9%87%8D%E5%BA%86%E5%B8%82%E4%B9%9D%E9%BE%99%E5%9D%A1%E5%8C%BA%E7%9F%B3%E6%A1%A5%E9%93%BA&c=132&src=0&pn=0&sug=0&l=15&b=(11849227,3420799;11859755,3426159)&from=webmap&biz_forward=%7B%22scaler%22:1,%22styles%22:%22pl%22%7D&device_ratio=1" target="_blank">重庆市九龙坡区石桥铺</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>个人邮箱 </b></li>
+								<li><a href="http://mail.qq.com/" target="_blank">1656458990@qq.com</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>毕业学校 </b></li>
+								<li><a href="http://www.cqyti.com/" target="_blank">重庆邮电大学移通学院</a></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>个人兴趣</b></li>
+								<li>业余时间喜欢听音乐、打球、下棋、看电影.</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!--//banner-->
+
+<div class="footer">
+	<div class="container">
+		<p style="color: skyblue">你要安静的优秀，悄无声息的坚强</p>
+	</div>
+</div>
+
+</body>
+</html>

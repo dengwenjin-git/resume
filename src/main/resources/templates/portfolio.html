@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>部分作品</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<!--top-nav-->
+<div class="top-nav wow">
+    <div class="container">
+        <div class="navbar-header logo">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                导航
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="menu">
+                <ul class="nav navbar">
+                    <li><a th:href="@{/index}" >主页</a></li>
+                    <li><a th:href="@{/about}">关于我</a></li>
+                    <li><a th:href="@{/experience}">个人经历</a></li>
+                    <li><a th:href="@{/education}">教育背景</a></li>
+                    <li><a th:href="@{/skills}">专业技能</a></li>
+                    <li><a th:href="@{/portfolio}" class="active">部分作品</a></li>
+                    <li><a th:href="@{/contact}">联系我</a></li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//top-nav-->
+<!--portfolio-->
+<div  class="portfolio">
+    <h3 class="title wow zoomInLeft animated" data-wow-delay=".5s">部分作品</h3>
+    <div id="content" class="lunbo_container">
+        <ul style="padding:0;margin:0">
+            <li id="li_1" style="list-style:none;display:inline-block;margin: 20px 60px "><a href="http://118.24.207.134/earth" target="_blank"><img src="images/earth.png" width="400" height="250"  alt="地球"/></a></li>
+            <li id="li_2" style="list-style:none;display:inline-block;margin: 20px 60px "><a href="http://118.24.207.134/petal" target="_blank"><img src="images/petal.png" width="400" height="250" alt="花瓣雨" /></a></li>
+            <li id="li_3" style="list-style:none;display:inline-block;margin: 20px 60px "><a href="http://118.24.207.134/butterfly" target="_blank"><img src="images/butterfly.png" width="400" height="250" alt="彩蝶"/></a></li>
+            <li id="li_4" style="list-style:none;display:inline-block;margin: 20px 60px "><a href="http://118.24.207.134/clock" target="_blank"><img src="images/clock.png" width="400" height="250" alt="时钟"/></a></li>
+            <li id="li_5" style="list-style:none;display:inline-block;margin: 20px 60px "><a href="http://118.24.207.134/love" target="_blank"><img src="images/love.png" width="400" height="250" alt="表白"/></a></li>
+            <li id="li_6" style="list-style:none;display:inline-block;margin: 20px 60px "><a href="http://118.24.207.134/photo" target="_blank"><img src="images/p_photo.png" width="400" height="250" alt="旋转相册"/></a></li>
+            <li id="li_7" style="list-style:none;display:inline-block;margin: 20px 60px "><a href="http://118.24.207.134/paperCrane" target="_blank"><img src="images/paperCrane.png" width="400" height="250"  alt="千纸鹤"/></a></li>
+            <li id="li_8" style="list-style:none;display:inline-block;margin: 20px 60px "><a href="http://118.24.207.134/paperPlane" target="_blank"><img src="images/paperPlane.png" width="400" height="250"  alt="纸飞机"/></a></li>
+            <li id="li_9" style="list-style:none;display:inline-block;margin: 20px 60px "><a href="http://118.24.207.134/roll" target="_blank"><img src="images/roll.png" width="400" height="250"  alt="翻滚"/></a></li>
+        </ul>
+    </div>
+</div>
+<!--//portfolio-->
+
+<script language="javascript" type="text/javascript">
+
+    //主函数
+    var s=function(){
+        var turnTime=2000; //切换间隔时间
+        var turnSpeed=10; //切换速速
+        var textView=80; //文字背景的透明度
+        var source="content" //焦点轮换图片容器的id名称
+        //获取对象
+        function getTag(tag,obj){
+            if(obj==null){
+                return document.getElementsByTagName(tag)
+            }
+            else{
+                return obj.getElementsByTagName(tag)
+            }
+        }
+        function getid(id){
+            return document.getElementById(id)
+        }
+        var opac=0,
+            j=0,//鼠标点击控制按钮的序号
+            t=63,
+            num,
+            scton=0,
+            timer,
+            timer2,
+            timer3;
+        var id=getid(source);//获得存放图片的容器
+        var li=getTag("li",id);//获得图片存放列表
+        var div=document.createElement("div");
+        var title=document.createElement("div");
+        var span=document.createElement("span");
+        var button=document.createElement("div");
+        button.className="button";
+        //轮播控制按钮
+        for(var i=0;i<li.length;i++){
+            var a=document.createElement("a");
+            a.innerHTML=i+1;
+            a.onclick=function(){
+                clearTimeout(timer);
+                clearTimeout(timer2);
+                clearTimeout(timer3);
+                j=parseInt(this.innerHTML)-1;
+                scton=0;t=63;opac=0;
+                fadeon();
+            }
+            a.className="b1";
+            a.onmouseover=function(){
+                this.className="b2"
+            }
+            a.onmouseout=function(){
+                this.className="b1";
+                sc(j)
+            }
+            button.appendChild(a);
+        }
+        //控制图层透明度
+        function alpha(obj,n){
+            if(document.all){
+                obj.style.filter="alpha(opacity="+n+")";
+            }else{
+                obj.style.opacity=(n/100);
+            }
+        }
+        //控制焦点按钮
+        function sc(n){
+            for(var i=0;i<li.length;i++){
+                button.childNodes[i].className="b1";
+            }
+            button.childNodes[n].className="b2";
+        }
+        title.className="num_list";
+        title.appendChild(span);
+        alpha(title,textView);
+        id.className="d1";
+        div.className="d2";
+        //添加轮播
+        // id.appendChild(div);
+        // id.appendChild(title);
+        // id.appendChild(button);
+        //渐显
+        var fadeon=function(){
+            opac+=5;
+            div.innerHTML=li[j].innerHTML;
+            span.innerHTML=getTag("img",li[j])[0].alt;
+            alpha(div,opac);
+            if(scton==0){
+                sc(j);
+                num=-2;
+                scrolltxt();
+                scton=1
+            }
+            if(opac<100){
+                timer=setTimeout(fadeon,turnSpeed);
+            }
+            else{
+                timer2=setTimeout(fadeout,turnTime);
+            }
+        }
+        //渐隐
+        var fadeout=function(){
+            opac-=5;
+            div.innerHTML=li[j].innerHTML;
+            alpha(div,opac);
+            if(scton==0){
+                num=2;
+                scrolltxt();
+                scton=1;
+            }
+            if(opac>0){
+                timer=setTimeout(fadeout,turnSpeed)
+            }else{
+                if(j<li.length-1){
+                    j++;
+                }else{
+                    j=0;
+                }
+                fadeon();
+            }
+        }
+        //滚动文字
+        var scrolltxt=function(){
+            t+=num;
+            span.style.marginTop=t+"px";
+            if(num<0 && t>3){
+                timer3=setTimeout(scrolltxt,turnSpeed);
+            }else if(num>0 && t<62){
+                timer3=setTimeout(scrolltxt,turnSpeed);
+            }else{
+                scton=0;
+            }
+        }
+        fadeon();
+    }
+    //初始化
+    window.onload=s;
+</script>
+
+<!--footer-->
+<div class="footer">
+    <div class="container">
+        <p>岁月本长，而忙者自促；天地本宽，而鄙者自隘；风花雪月本闲，而扰攘者自冗</p>
+    </div>
+</div>
+<!--//footer-->
+
+</body>
+</html>

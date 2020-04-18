@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dengwenjin.resume.dao.UserDao">
+
+    <select id="getUserList" resultType="com.dengwenjin.resume.pojo.User">
+        select id ,name, email,phone,matter
+        from user ;
+    </select>
+
+    <insert id="addUserList">
+        insert into resume.user(name, email, phone, matter)
+        values (#{name},#{email},#{phone},#{matter})
+    </insert>
+</mapper>

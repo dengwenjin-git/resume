@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>关于我</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+  <link type="text/css"  href="css/app.css" rel="stylesheet ">
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<!--top-nav-->
+<div class="top-nav wow">
+  <div class="container">
+    <div class="navbar-header logo">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        导航
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="menu">
+        <ul class="nav navbar">
+          <li><a th:href="@{/index}" >主页</a></li>
+          <li><a th:href="@{/about}" class="active">关于我</a></li>
+          <li><a th:href="@{/experience}">个人经历</a></li>
+          <li><a th:href="@{/education}">教育背景</a></li>
+          <li><a th:href="@{/skills}">专业技能</a></li>
+          <li><a th:href="@{/portfolio}">部分作品</a></li>
+          <li><a th:href="@{/contact}">联系我</a></li>
+        </ul>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--//top-nav-->
+<!--about-->
+<div id="about" class="about" style="background-color: #0d0d0d">
+  <div class="container">
+    <h3 class="title">About Me</h3>
+    <div class="col-md-8 about-left">
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;我有较好的计算机知识和应用能力，能熟练的进行Windows和LINUX操作，并能使用java，python等语言编程.能运用Photoshop,Sublime等软件进行相关工作。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;我的专长是java程序开发，我希望能从事这方面的工作.我曾开发过多个系统，其中有，人脸识别签到系统，人事档案管理系统，工资管理系统等等.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;我的工作特点。第一是团队协作意识强，善于与人交流和沟通;第二是动手能力和学习能力突出;第三是做事稳健，态度认真，有一定的组织协调能力;第四是考虑问题全面、仔细，做事有自己明确的想法和计划。我想在走上工作岗位之后，我可以以最快的速度适应工作环境，不断挖掘自己的能力，完善自己，为企业创造效益。
+       </p>
+    </div>
+    <div class="col-md-4 about-right">
+      <div id="react" style="margin-top: 20px">
+        <div class="out_front">
+          <img src="images2/1.jpg" class="out_pic">
+        </div>
+        <div class="out_back">
+          <img src="images2/2.jpg" class="out_pic">
+        </div>
+        <div class="out_left">
+          <img src="images2/3.jpg" class="out_pic">
+        </div>
+        <div class="out_right">
+          <img src="images2/4.jpg" class="out_pic">
+        </div>
+        <div class="out_top">
+          <img src="images2/5.jpg" class="out_pic">
+        </div>
+        <div class="out_bottom">
+          <img src="images2/6.jpg" class="out_pic">
+        </div>
+        <span class="in_front">
+        <img src="images2/7.jpg" class="in_pic">
+    </span>
+        <span class="in_back">
+        <img src="images2/8.jpg" class="in_pic">
+    </span>
+        <span class="in_left">
+        <img src="images2/9.jpg" class="in_pic">
+    </span>
+        <span class="in_right">
+        <img src="images2/10.jpg" class="in_pic">
+    </span>
+        <span class="in_top">
+        <img src="images2/11.jpg" class="in_pic">
+    </span>
+        <span class="in_bottom">
+        <img src="images2/12.jpg" class="in_pic">
+    </span>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+</div>
+<!--//about-->
+
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <p style="color: skyblue">选择时尽心，行动时尽力，坚持时无怨，结束时无悔</p>
+  </div>
+</div>
+<!--//footer-->
+</body>
+</html>

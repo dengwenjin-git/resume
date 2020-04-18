@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>个人经历</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<!--top-nav-->
+<div class="top-nav wow">
+  <div class="container">
+    <div class="navbar-header logo">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        导航
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="menu">
+        <ul class="nav navbar">
+          <li><a th:href="@{/index}" >主页</a></li>
+          <li><a th:href="@{/about}">关于我</a></li>
+          <li><a th:href="@{/experience}" class="active">个人经历</a></li>
+          <li><a th:href="@{/education}">教育背景</a></li>
+          <li><a th:href="@{/skills}">专业技能</a></li>
+          <li><a th:href="@{/portfolio}">部分作品</a></li>
+          <li><a th:href="@{/contact}">联系我</a></li>
+        </ul>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--//top-nav-->
+
+<!---experience-->
+<div id="work" class="work">
+  <div class="container">
+    <h3 class="title">个人经历</h3>
+    <div class="work-info">
+      <div class="col-md-6 work-left">
+        <h4>2019.9 - 2020.1 </h4>
+      </div>
+      <div class="col-md-6 work-right">
+        <h5><span class="glyphicon glyphicon-briefcase"></span>重庆呈好科技有限公司</h5>
+        <p>1. 负责时时优享平台的后台管理<br/>
+           2. 进行分享海报的设计和制作<br/>
+           3. 负责公众号的功能和商品宣传<br/>
+           4. 进行平台的商品添加和详情设计<br/>
+           5. 给实体商家讲解后台和授权</p>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div class="work-info">
+      <div class="col-md-6 work-left">
+        <h4>2018.3 - 2019.6 </h4>
+      </div>
+      <div class="col-md-6 work-right">
+        <h5><span class="glyphicon glyphicon-briefcase"></span>重庆百木科技有限公司</h5>
+        <p>1. 前期学习主流框架和技术，后期参与到开发中<br/>
+           2. 了解项目需求，编写开发流程文档<br/>
+           3. 编写项目中某个模块的代码<br/>
+           4. 和其他技术人员交流前后端的数据传输<br/>
+           5. 按时向项目组长汇报项目进度，并完成相应的工作任务</p>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <div class="work-info">
+      <div class="col-md-6 work-left">
+        <h4>2015.9 - 2019.6 </h4>
+      </div>
+      <div class="col-md-6 work-right">
+        <h5><span class="glyphicon glyphicon-briefcase"></span>重庆邮电大学移通学院</h5>
+        <p>1. 大一进入学生会，组织活动，参与并学习Adobe系列的软件<br/>
+           2. 学习AE,PR后制作学校宣传片在广告创意大赛中获得三等奖<br/>
+           3. 大二、大三因专业课的增多而不断学习编程技术，包括C语言，Java，Python<br/>
+           4. 大四开始实习，同时毕设用Python制作人脸识别课堂签到系统
+        </p>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+    <!--<div class="work-info">-->
+      <!--<div class="col-md-6 work-left">-->
+        <!--<h4>2012.9 - 2015.6</h4>-->
+      <!--</div>-->
+      <!--<div class="col-md-6  work-right">-->
+        <!--<h5><span class="glyphicon glyphicon-briefcase"></span>重庆市巫山中学 </h5>-->
+        <!--<p>在巫山中学就读高中，在校表现良好，生活上和同学老师建立良好关系。兴趣爱好看书、听音乐、下棋、打篮球。</p>-->
+      <!--</div>-->
+      <!--<div class="clearfix"> </div>-->
+    <!--</div>-->
+    <!--<div class="work-info">-->
+      <!--<div class="col-md-6 work-left">-->
+        <!--<h4>2009.9 - 2012.6 </h4>-->
+      <!--</div>-->
+      <!--<div class="col-md-6 work-right">-->
+        <!--<h5><span class="glyphicon glyphicon-briefcase"> </span>重庆市大昌中学</h5>-->
+        <!--<p>在大昌中学就读初中，在校表现良好，学习成绩优异。在校期间曾参加多科目的竞赛考试，取得名次。</p>-->
+      <!--</div>-->
+      <!--<div class="clearfix"> </div>-->
+    <!--</div>-->
+    <!--<div class="work-info">-->
+      <!--<div class="col-md-6 work-left">-->
+        <!--<h4>&nbsp2009.9 以前 &nbsp </h4>-->
+      <!--</div>-->
+      <!--<div class="col-md-6 work-right">-->
+        <!--<h5> <span class="glyphicon glyphicon-briefcase"></span>顺利完成小学六年义务教育</h5>-->
+        <!--<p>作为小学生我爱学习、爱思考、勤于实践，坚持努力学好各门功课，并且积极参加形式多样的课外活动。</p>-->
+      <!--</div>-->
+      <!--<div class="clearfix"> </div>-->
+    <!--</div>-->
+  </div>
+</div>
+<!--//work-experience-->
+
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <p>世界很大，风景很美</p>
+  </div>
+</div>
+<!--//footer-->
+</body>
+</html>

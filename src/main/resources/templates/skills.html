@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>专业技能</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+</head>
+<body>
+<!--top-nav-->
+<div class="top-nav wow">
+  <div class="container">
+    <div class="navbar-header logo">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        导航
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="menu">
+        <ul class="nav navbar">
+          <li><a th:href="@{/index}" >主页</a></li>
+          <li><a th:href="@{/about}">关于我</a></li>
+          <li><a th:href="@{/experience}">个人经历</a></li>
+          <li><a th:href="@{/education}">教育背景</a></li>
+          <li><a th:href="@{/skills}" class="active">专业技能</a></li>
+          <li><a th:href="@{/portfolio}">部分作品</a></li>
+          <li><a th:href="@{/contact}">联系我</a></li>
+        </ul>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--//top-nav-->
+
+<!--skills-->
+<div id="skills" class="skills">
+  <div class="container">
+    <h3 class="title">专业技能</h3>
+    <div class="skills-info">
+      <div class="col-md-6 bar-grids">
+        <h6>吃喝玩乐  <span> 100% </span></h6>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" style="width: 100%">
+          </div>
+        </div>
+        <h6>大数据数据分析 <span> 88% </span></h6>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" style="width: 88%">
+          </div>
+        </div>
+        <h6>javaweb后端开发<span>90% </span></h6>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" style="width: 90%">
+          </div>
+        </div>
+        <h6>Linux <span> 75% </span></h6>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" style="width: 75%">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 bar-grids">
+        <h6>h5前端开发 <span> 85% </span></h6>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" style="width: 85%">
+          </div>
+        </div>
+        <h6>python数据爬虫<span> 95% </span></h6>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" style="width: 95%">
+          </div>
+        </div>
+        <h6>html和css布局<span>80% </span></h6>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" style="width: 80%">
+          </div>
+        </div>
+        <h6>java高级编程师<span> 60% </span></h6>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" style="width: 60%">
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+<!--//skills-->
+
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <p>事常与人违，事总在人为</p>
+  </div>
+</div>
+<!--//footer-->
+
+</body>
+</html>
