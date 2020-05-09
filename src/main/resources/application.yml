@@ -5,8 +5,8 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://cdb-hexh36ks.cd.tencentcdb.com:10045/resume?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-    username: root
-    password: dj775280
+    username: 
+    password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
 #  mvc:
 #    view:
